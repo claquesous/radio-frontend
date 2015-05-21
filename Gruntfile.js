@@ -23,16 +23,7 @@ function configureGrunt(grunt) {
 					ignore: [
 						'./app/javascripts/server/**/*.js',
 						'./node_modules/brisket/lib/server/**/*.js'
-					],
-					shim: {
-						'jquery-mockjax': {
-							path: 'node_modules/brisket/node_modules/jquery-mockjax/jquery.mockjax.js',
-							exports: null,
-							depends: {
-								jquery: 'jQuery'
-							}
-						}
-					}
+					]
 				}
 			}
 
