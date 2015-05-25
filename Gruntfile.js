@@ -6,6 +6,7 @@ function configureGrunt(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks("grunt-concurrent");
 	grunt.loadNpmTasks('grunt-exec');
+	grunt.loadNpmTasks('grunt-forever');
 
 	grunt.initConfig({
 
@@ -68,8 +69,16 @@ function configureGrunt(grunt) {
 					'build',
 				]
 			}
+		},
+		forever: {
+			radio: {
+				options: {
+					index: 'server.js',
+					logDir: 'log',
+					logFile: 'forever.log',
+				}
+			}
 		}
-
 	});
 
 
