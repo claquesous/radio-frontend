@@ -13,6 +13,7 @@ var Routers = Brisket.Routers.toUse({
         require('../artists/ArtistsRouter'),
         require('../albums/AlbumsRouter'),
         require('../songs/SongsRouter'),
+        require('../plays/PlaysRouter'),
     ]
 
 });
