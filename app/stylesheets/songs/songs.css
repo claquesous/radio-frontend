@@ -1,0 +1,19 @@
+.rating {
+    overflow: hidden;
+}
+
+.rating-inner1 {
+    width: 250px;
+    height: 50px;
+    background: linear-gradient(to left, red , blue);
+}
+
+.rating-inner2 {
+    position: relative;
+    border-width: 0px 0px 50px 250px;
+    border-style: solid;
+    border-color: transparent transparent transparent white;
+    left: 0px;
+    top: 0px;
+}
+
