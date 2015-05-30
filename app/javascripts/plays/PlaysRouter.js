@@ -16,7 +16,7 @@ var PlaysRouter = RouterBrewery.create({
 
     plays: function() {
         var plays = new PlayCollection();
-        return plays.fetch()
+        return plays.fetch({data: {limit: 1}})
             .then(function() {
                 return new PlayCollectionView({ collection: plays });
             });
