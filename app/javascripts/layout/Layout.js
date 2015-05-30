@@ -2,26 +2,17 @@
 
 var Brisket = require('brisket');
 var BaseView = require('../base/BaseView');
+var templates = require("../templating/templates").templates;
+var HoganAdapter = require("hogan-brisket")(templates);
 
 var Layout = Brisket.Layout.extend({
+    templateAdapter: HoganAdapter,
 
     defaultTitle: 'Claquesous Radio',
 
     content: '#content',
 
-    template:
-        '<!DOCTYPE html>\n' +
-        '<html>\n' +
-        '<head>\n' +
-            '<meta charset="utf-8">\n' +
-            '<title>Claquesous Radio</title>\n' +
-        '</head>\n' +
-        '<body>\n' +
-            '<div id="content">\n' +
-            '</div>\n' +
-            '<script type="text/javascript" src="/javascripts/application.js"></script>\n' +
-        '</body>\n' +
-        '</html>\n',
+    template: 'layout/layout',
 
     beforeRender: function() {
         this.createChildView(HeaderView)
@@ -30,7 +21,7 @@ var Layout = Brisket.Layout.extend({
 
 });
 
-var HeaderView = BaseView.extend({
+var HeaderView = Brisket.View.extend({
 
     template: '<header><h1><a href="" class="logo">Claquesous Radio</a></h1></header>',
 

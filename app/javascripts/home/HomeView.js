@@ -3,7 +3,7 @@
 var BaseView = require('../base/BaseView');
 
 var HomeView = BaseView.extend({
-    template: '<h1>Welcome to Claquesous Radio!</h1>'
+    template: 'home/home'
 });
 
 module.exports = HomeView;

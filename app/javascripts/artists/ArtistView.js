@@ -3,12 +3,7 @@
 var BaseView = require('../base/BaseView');
 
 var ArtistView = BaseView.extend({
-
-    template: '<section class="artist"><h1></h1></section>',
-
-    afterRender: function() {
-        this.$('h1').html(this.model.get('name'));
-    }
+    template: 'artists/artist'
 });
 
 module.exports = ArtistView;
