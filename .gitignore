@@ -1,5 +1,6 @@
 node_modules
 public/javascripts
+public/stylesheets
 config.js
 log
 app/javascripts/templating/templates.js

@@ -8,6 +8,7 @@ function configureGrunt(grunt) {
     grunt.loadNpmTasks('grunt-exec');
     grunt.loadNpmTasks('grunt-forever');
     grunt.loadNpmTasks('grunt-hogan');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
 
     grunt.initConfig({
 
@@ -34,6 +35,9 @@ function configureGrunt(grunt) {
         clean: {
             js: [
                 'public/javascripts',
+            ],
+            css: [
+                'public/stylesheets',
             ]
         },
 
@@ -93,13 +97,26 @@ function configureGrunt(grunt) {
                 }
             }
         },
+        cssmin: {
+            target: {
+                files: [{
+                    src: [
+                        'node_modules/bootstrap/dist/css/bootstrap.min.css',
+                        'app/stylesheets/**/*.css'
+                    ],
+                    dest: 'public/stylesheets/application.min.css',
+                }]
+            }
+        },
     });
 
 
     grunt.registerTask('build', [
         'clean:js',
+        'clean:css',
         'hogan:compile',
-        'browserify:build'
+        'browserify:build',
+        'cssmin:target',
     ]);
 
     grunt.registerTask('server', [
