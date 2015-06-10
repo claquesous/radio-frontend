@@ -1,0 +1,83 @@
+body {
+  font-family: Roboto, sans-serif;
+  color: #333;
+  font-size: 16px;
+  line-height: 22px;
+}
+.logo-text {
+  margin-top: 24px;
+  font-family:'Roboto Slab', sans-serif;
+  color: white;
+  font-size: 27px;
+  font-weight: 500;
+}
+.logo-text.footer {
+  margin-top: 0px;
+  margin-bottom: 19px;
+  color: #e6eaed;
+}
+.navigation {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 0px 0px;
+  padding-bottom: 27px;
+  z-index: 1000;
+}
+.section {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+.section.main {
+  margin-top: 73px;
+  background-color: #489fd9;
+  color: white;
+  text-shadow: rgba(0, 0, 0, 0.22) 0px 1px 0px;
+}
+.section.footer {
+  padding-top: 42px;
+  padding-bottom: 42px;
+  background-color: #2b2c2e;
+  color: #e4e8eb;
+}
+.section.copyright {
+  padding-top: 19px;
+  padding-bottom: 19px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #939596;
+  font-size: 14px;
+}
+.footer-slogan {
+  margin-bottom: 11px;
+  color: #939596;
+}
+.social-icon {
+  margin-right: 11px;
+  opacity: 0.41;
+  -webkit-transition: opacity 300ms ease;
+  transition: opacity 300ms ease;
+}
+.social-icon:hover {
+  opacity: 1;
+}
+a.brand-link {
+  text-decoration: none;
+}
+.copyright {
+  color: white;
+}
+.live365-player {
+  height: 330px;
+}
+@media (max-width: 767px) {
+  .section {
+    padding-top: 43px;
+    padding-bottom: 43px;
+    text-align: center;
+  }
+  .section.main {
+    margin-top: 51px;
+  }
+}

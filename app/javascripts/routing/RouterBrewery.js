@@ -1,6 +1,7 @@
 'use strict';
 
 var Brisket = require('brisket');
+var $ = require('jquery');
 
 var RouterBrewery = Brisket.RouterBrewery.makeBreweryWithDefaults({
 
@@ -21,7 +22,7 @@ var RouterBrewery = Brisket.RouterBrewery.makeBreweryWithDefaults({
             return;
         }
 
-        window.scrollTo(0, 0);
+        window.scrollTo(0, $("#content").parents(".section").offset().top - $('div.navigation').height());
     }
 
 });

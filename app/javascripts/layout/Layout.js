@@ -14,24 +14,6 @@ var Layout = Brisket.Layout.extend({
 
     template: 'layout/layout',
 
-    beforeRender: function() {
-        this.createChildView(HeaderView)
-            .andPrependItTo('body');
-    }
-
-});
-
-var HeaderView = Brisket.View.extend({
-
-    template: '<header><h1><a href="" class="logo">Claquesous Radio</a></h1></header>',
-
-    onDOM: function() {
-        var $logo = this.$('.logo');
-        $logo.fadeOut(function() {
-            $logo.fadeIn();
-        });
-    }
-
 });
 
 module.exports = Layout;
