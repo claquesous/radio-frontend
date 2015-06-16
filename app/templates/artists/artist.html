@@ -1,1 +1,12 @@
-<section class="artist"><h1>{{name}}</h1></section>
+<section class="artist"><h1>{{name}}</h1>
+<div class="col-md-6">
+<table class="table table-hover">
+{{#songs}}
+<tr>
+  <td><a href="songs/{{id}}">{{title}}</a></td>
+  <td>{{> songs/_rating}}</td>
+</tr>
+{{/songs}}
+</table>
+</div>
+</section>
