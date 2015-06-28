@@ -21,8 +21,8 @@ var PlayView = BaseView.extend({
         this.listenTo(this.collection, 'add', this.renderNewTweet);
         twttr.widgets.createTweet( this.model.get('tweet_id'), this.$('#tweet')[0], {theme: 'dark'});
         if (this.model.get('tweet_id')){
-            this.$('#tweet').append('<a href="https://twitter.com/intent/tweet?screen_name=ClaqRadio&text=I%20love%20this%20song!&in-reply-to='+this.model.get('tweet_id')+'" class="twitter-mention-button" data-size="large" data-related="ClaqRadio" data-dnt="true">Rate Up</a>');
-            this.$('#tweet').append('<a href="https://twitter.com/intent/tweet?screen_name=ClaqRadio&text=I%20hate%20this%20song!&in-reply-to='+this.model.get('tweet_id')+'" class="twitter-mention-button" data-size="large" data-related="ClaqRadio" data-dnt="true">Rate Down</a>');
+            this.$('#tweet').append('<a href="https://twitter.com/intent/tweet?text=I%20love%20this%20song!&in_reply_to='+this.model.get('tweet_id')+'" class="twitter-mention-button" data-size="large" data-related="ClaqRadio" data-dnt="true">Rate Up</a>');
+            this.$('#tweet').append('<a href="https://twitter.com/intent/tweet?text=I%20hate%20this%20song!&in_reply_to='+this.model.get('tweet_id')+'" class="twitter-mention-button" data-size="large" data-related="ClaqRadio" data-dnt="true">Rate Down</a>');
         }
         setTimeout(this.refresh.bind(this), 15000);
     }
