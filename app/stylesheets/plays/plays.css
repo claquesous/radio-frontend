@@ -24,3 +24,7 @@ a.twitter-mention-button:focus {
   outline: none;
   border-color: #0089cb;
 }
+
+div#tweet {
+  margin-bottom: 12px;
+}

@@ -53,6 +53,9 @@ body {
   margin-bottom: 11px;
   color: #939596;
 }
+.social-icon-group {
+  margin-bottom: 12px;
+}
 .social-icon {
   margin-right: 11px;
   opacity: 0.41;

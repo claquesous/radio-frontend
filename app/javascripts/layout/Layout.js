@@ -23,7 +23,7 @@ var Layout = Brisket.Layout.extend({
 
     beforeRender: function(){
         this.createChildView(PlayView)
-            .withOptions({model: this.plays.at(0)})
+            .withOptions({collection: this.plays, model: this.plays.at(0)})
             .andInsertInto('.now-playing');
     }
 });
