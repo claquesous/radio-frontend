@@ -67,6 +67,8 @@ function configureGrunt(grunt) {
             js: {
                 files: [
                     'app/javascripts/**/*.js',
+                    '!app/javascripts/templating/*.js',
+                    'app/templates/**/*.html',
                     'server.js',
                     'Gruntfile.js',
                 ],
