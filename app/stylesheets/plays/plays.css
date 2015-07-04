@@ -28,3 +28,8 @@ a.twitter-mention-button:focus {
 div#tweet {
   margin-bottom: 12px;
 }
+
+div.playstats {
+  float: right;
+  margin-right: 40px;
+}
