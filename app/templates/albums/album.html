@@ -1,3 +1,13 @@
 <section class="album"><h1>{{title}}</h1>
 {{> plays/_playstats}}
+<div class="col-md-6">
+<table class="table table-hover">
+{{#songs}}
+<tr>
+  <td><a href="songs/{{id}}">{{title}}</a></td>
+  <td>{{> songs/_rating}}</td>
+</tr>
+{{/songs}}
+</table>
+</div>
 </section>
