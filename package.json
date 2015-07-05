@@ -25,5 +25,5 @@
     "grunt-contrib-watch": "~0.6.1",
     "grunt-exec": "~0.4.6",
     "nodemon": "~1.2.1"
-  },
+  }
 }
