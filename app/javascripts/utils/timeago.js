@@ -5,6 +5,8 @@ var timeago = require('timeago');
 
 module.exports = function() {
     var $time = $('time');
-    var datetime = $time.attr('datetime');
-    $time.html(datetime? timeago(datetime): 'Never');
+    $time.each(function(){
+        var datetime = $(this).attr('datetime');
+        $(this).html(datetime? timeago(datetime): 'Never');
+    });
 }
