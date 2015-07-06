@@ -3,14 +3,14 @@
 }
 
 .rating-inner1 {
-    width: 250px;
-    height: 50px;
+    width: 140px;
+    height: 45px;
     background: linear-gradient(to left, red , blue);
 }
 
 .rating-inner2 {
     position: relative;
-    border-width: 0px 0px 50px 250px;
+    border-width: 0px 0px 45px 140px;
     border-style: solid;
     border-color: transparent transparent transparent white;
     left: 0px;
@@ -19,4 +19,8 @@
 
 .table-hover>tbody>tr:hover .rating-inner2 {
     border-left-color: #f5f5f5;
+}
+
+table#recent_plays td {
+    padding: 5px;
 }
