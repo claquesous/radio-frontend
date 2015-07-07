@@ -9,6 +9,7 @@ function configureGrunt(grunt) {
     grunt.loadNpmTasks('grunt-forever');
     grunt.loadNpmTasks('grunt-hogan');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-copy');
 
     grunt.initConfig({
 
@@ -38,6 +39,9 @@ function configureGrunt(grunt) {
             ],
             css: [
                 'public/stylesheets',
+            ],
+            fonts: [
+                'public/fonts',
             ]
         },
 
@@ -104,10 +108,23 @@ function configureGrunt(grunt) {
                 files: [{
                     src: [
                         'node_modules/bootstrap/dist/css/bootstrap.min.css',
+                        'node_modules/jquery-ui/themes/vader/jquery-ui.min.css',
                         'app/stylesheets/**/*.css'
                     ],
                     dest: 'public/stylesheets/application.min.css',
                 }]
+            }
+        },
+        copy: {
+            fonts: {
+                files: [
+                    {
+                        cwd: 'node_modules/bootstrap/fonts/',
+                        src: ['**'],
+                        dest: 'public/fonts/',
+                        expand: true,
+                    },
+                ],
             }
         },
     });
@@ -119,6 +136,7 @@ function configureGrunt(grunt) {
         'hogan:compile',
         'browserify:build',
         'cssmin:target',
+        'copy:fonts',
     ]);
 
     grunt.registerTask('server', [

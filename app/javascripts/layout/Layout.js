@@ -1,11 +1,11 @@
 'use strict';
 
 var Brisket = require('brisket');
-var BaseView = require('../base/BaseView');
 var templates = require("../templating/templates").templates;
 var HoganAdapter = require("hogan-brisket")(templates);
 var PlayCollection = require('../plays/PlayCollection');
 var PlayView = require('../plays/PlayView');
+var setupAutocomplete = require('./setupAutocomplete');
 
 var Layout = Brisket.Layout.extend({
     templateAdapter: HoganAdapter,
@@ -25,7 +25,9 @@ var Layout = Brisket.Layout.extend({
         this.createChildView(PlayView)
             .withOptions({collection: this.plays, model: this.plays.at(0)})
             .andInsertInto('.now-playing');
-    }
+    },
+
+    onDOM: setupAutocomplete
 });
 
 module.exports = Layout;

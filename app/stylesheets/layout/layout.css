@@ -23,8 +23,11 @@ body {
   right: 0px;
   background-color: rgba(0, 0, 0, 0.8);
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 0px 0px;
-  padding-bottom: 27px;
-  z-index: 1000;
+  padding-bottom: 22px;
+  z-index: 100;
+}
+.navigation .container div {
+  display: inline-block;
 }
 .section {
   padding-top: 70px;
@@ -81,6 +84,24 @@ a.brand-link {
     text-align: center;
   }
   .section.main {
-    margin-top: 51px;
+    margin-top: 73px;
   }
 }
+div#search-box {
+  float: right;
+  padding-top: 23px;
+  padding-left: 30px;
+}
+input#search {
+  width: 120px;
+}
+#search-box span.glyphicon {
+  color: #fff;
+  margin-right: 6px;
+}
+@media (max-width: 460px) {
+  .logo-text {
+    font-size: 18px;
+  }
+}
+
