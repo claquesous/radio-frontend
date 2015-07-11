@@ -6,7 +6,7 @@ var Album = BaseModel.extend({
 
     idAttribute: 'id',
 
-    urlRoot: '/albums'
+    urlRoot: '/api/albums'
 });
 
 module.exports = Album;

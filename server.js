@@ -15,6 +15,10 @@ var app = express()
 
         clientAppRequirePath: 'app/ClientApp',
 
+        environmentConfig: {
+            clientAppUrl: 'javascripts/application.js'
+        },
+
         ServerApp: require('./app/javascripts/server/ServerApp'),
 
         onRouteHandled: function(options) {

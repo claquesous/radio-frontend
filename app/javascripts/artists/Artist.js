@@ -6,7 +6,7 @@ var Artist = BaseModel.extend({
 
     idAttribute: 'id',
 
-    urlRoot: '/artists'
+    urlRoot: '/api/artists'
 });
 
 module.exports = Artist;

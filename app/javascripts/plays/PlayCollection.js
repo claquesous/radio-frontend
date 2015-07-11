@@ -5,7 +5,7 @@ var Play = require('./Play');
 
 var PlayCollection = BaseCollection.extend({
     model: Play,
-    url: '/plays.json'
+    url: '/api/plays.json'
 });
 
 module.exports = PlayCollection;

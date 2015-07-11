@@ -6,7 +6,7 @@ var Play = BaseModel.extend({
 
     idAttribute: 'id',
 
-    urlRoot: '/plays'
+    urlRoot: '/api/plays'
 });
 
 module.exports = Play;
