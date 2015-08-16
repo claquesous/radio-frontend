@@ -11,7 +11,11 @@ var app = express()
     .use(express.static(__dirname + '/public'))
 
     .use(Brisket.createServer({
-        apiHost: RadioConfig.backend,
+        apis: {
+            api: {
+                host: RadioConfig.backend
+            }
+        },
 
         clientAppRequirePath: 'app/ClientApp',
 
