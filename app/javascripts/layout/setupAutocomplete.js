@@ -14,7 +14,7 @@ module.exports = function() {
 
     $('#search').autocomplete({
         source: function(request,response) {
-            $.ajax({url:"/api/songs.json", type: 'GET', dataType: 'json', data: { query: request.term, limit: 10 }, success: function(data){ response(data.map(function(song){ return {label: song.artist.name + ' - ' + song.title, value: song.id}}));}});
+            $.ajax({url:"/api/songs", type: 'GET', dataType: 'json', data: { query: request.term, limit: 10 }, success: function(data){ response(data.map(function(song){ return {label: song.artist.name + ' - ' + song.title, value: song.id}}));}});
         },
         minLength: 2,
         position: { my : "right top", at: "right bottom" },

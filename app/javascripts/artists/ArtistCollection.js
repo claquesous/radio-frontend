@@ -5,7 +5,7 @@ var Artist = require('./Artist');
 
 var ArtistCollection = BaseCollection.extend({
     model: Artist,
-    url: '/artists.json'
+    url: '/artists'
 });
 
 module.exports = ArtistCollection;
