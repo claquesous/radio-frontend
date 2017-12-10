@@ -1,8 +1,8 @@
 'use strict';
 
-var Brisket = require('brisket');
+var Backbone = require('brisket').Backbone;
 
-var BaseModel = Brisket.Model.extend({
+var BaseModel = Backbone.Model.extend({
     // add properties here that you want to expose to all of your Models
 });
 
