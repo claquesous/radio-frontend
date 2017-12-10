@@ -1,11 +1,11 @@
 'use strict';
 
 var Metatags = require("brisket").Layout.Metatags;
-var RouterBrewery = require('../routing/RouterBrewery');
+var Router = require('../routing/Router');
 var Song = require('./Song');
 var SongView = require('./SongView');
 
-var SongsRouter = RouterBrewery.create({
+var SongsRouter = Router.extend({
 
     routes: {
         'songs/:id': 'song'

@@ -2,18 +2,16 @@
 
 var Brisket = require('brisket');
 var $ = require('jquery');
+var layout = require('../layout/Layout');
 
-var RouterBrewery = Brisket.RouterBrewery.makeBreweryWithDefaults({
+var Router = Brisket.Router.extend({
 
-	layout: require('../layout/Layout'),
+    layout: layout,
 
-	errorViewMapping: Brisket.ErrorViewMapping.create({
-
-		404: require('../errors/PageNotFoundView'),
-
-		500: require('../errors/DefaultErrorView')
-
-	}),
+    errorViewMapping: Brisket.ErrorViewMapping.create({
+        404: require('../errors/PageNotFoundView'),
+        500: require('../errors/DefaultErrorView')
+    }),
 
     onRouteComplete: function(layout, request) {
         console.log('ClientApp rendered ' + request.path);
@@ -27,4 +25,4 @@ var RouterBrewery = Brisket.RouterBrewery.makeBreweryWithDefaults({
 
 });
 
-module.exports = RouterBrewery;
+module.exports = Router;

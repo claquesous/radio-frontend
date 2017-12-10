@@ -1,10 +1,10 @@
 'use strict';
 
-var RouterBrewery = require('../routing/RouterBrewery');
+var Router = require('../routing/Router');
 var PageNotFoundView = require('../errors/PageNotFoundView');
 var DefaultErrorView = require('../errors/DefaultErrorView');
 
-var ApplicationRouter = RouterBrewery.create({
+var ApplicationRouter = Router.extend({
 
     routes: {
         '*undefined': 'pageNotFound',
