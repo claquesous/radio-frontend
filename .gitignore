@@ -5,3 +5,4 @@ public/fonts
 config.js
 log
 app/javascripts/templating/templates.js
+.tool-versions
